@@ -1,0 +1,219 @@
+﻿<#@ Template Language="C#" Debug="True" hostspecific="True" 
+#><#@ Output Extension=".log" 
+#><#@ Assembly Name="System.Windows.Forms"
+#><#@ Include File="Manager.ttinclude"
+#><#@ Include File="TranslationsProvider.ttinclude"
+#><#@ import namespace="System.Text.RegularExpressions"
+#><#@ import namespace="System.Resources"
+#><#@ import namespace="System.Reflection"
+#><#
+		// Translation Database Settings
+		var marketName = "EBSCONET";
+		var connectionString = @"Data Source=ISSHQDBSQLCL2P1\CUSTOMERAPP;Initial Catalog=Translations;User ID=TrnsEBSCONet;Password=KADQI5TBF8";
+		
+		// .cs File settings 
+        var classesNamespace = "ebsco.svc.customerserviceportal.translations";
+        var resourcesClassName = "Resources";
+		var defaultTokenPrefix = "EN_";			// Used when creating a token in the Resources.Translate(string) method
+		
+		// .resx File Settings
+		var resourcesNamespace = "ebsco.svc.customerserviceportal.translations";        
+		var resourcesName = "Resources";
+		
+		// resourcesNamespace should be set to the folder-based namespace for the
+		// resource files. If not set correctly, the resourcemanager in the generated
+		// c# file will not be able to locate the resource files.	
+    	
+		// UC.Translations.Resources.EN_Yes
+		// UC.Translations.Resources.EN_Yes  -> Translated "Yes"
+		// UC.Translations.Tokens.EN_Yes		-> "EN_Yes"
+		// UC.Translations.Tokens.AllTokens.Where(t => t.StartsWith("EN_FilterValue_"))
+		
+		
+		var manager = Manager.Create(Host, GenerationEnvironment);
+		
+		TranslationSet translationSet = new TranslationsProvider(GenerationEnvironment, connectionString)
+            .GetTranslationSet(marketName);
+	
+		foreach (var localeGroup in translationSet.Translations.GroupBy(p => p.Locale))
+		{
+			var fileName = localeGroup.Key == "en-us" ? resourcesName + ".resx" : string.Format("{0}.{1}.resx", resourcesName, localeGroup.Key);
+			using (manager.BeginBlock(fileName))
+			{
+				AddPageWriteResx(localeGroup);
+			}
+		}
+		
+        using (manager.BeginBlock(resourcesClassName + ".cs"))
+		{
+			var englishTranslations = translationSet.Translations.Where(t => t.LocaleId == 1033);
+			AddPageClass(classesNamespace, resourcesClassName, resourcesNamespace, resourcesName, defaultTokenPrefix, englishTranslations);
+		}
+		
+		foreach(var duplicate in translationSet.Duplications)
+		{
+			GenerationEnvironment.AppendFormat("Duplicate Token: {0}, LocaleId: {1}, Text: {2}\n", duplicate.ElementName, duplicate.LocaleId, duplicate.SafeContents);
+		}
+		
+		manager.Process();       
+#><#+
+		
+public void AddPageClass(string classesNamespace, string resourcesClassName, string resourcesNamespace, string resourcesName, string defaultPrefix, IEnumerable<Translation> translations)
+{
+#>namespace <#= classesNamespace #> {
+    using System;  
+	using System.Reflection; 
+	using System.Linq;
+
+    public static class ResourceExtensionMethods
+    {
+        public static string English(this string value, string englishText)
+        {
+            //if (System.Threading.Thread.CurrentThread.CurrentUICulture.LCID == 1033 && !string.Equals(value, englishText, StringComparison.Ordinal))
+            //{
+            //    return string.Format("** {0} ** (Diff)", value);
+            //}
+            //else
+            //{
+            return value;
+            //}
+        }
+    }
+	    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    public class <#= resourcesClassName #>
+	{
+        private static global::System.Resources.ResourceManager resourceMan;        
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal <#= resourcesClassName #>() { }
+        
+		public static Action<string, string> FailureLogger;
+
+		internal static string TranslateToken(string token)
+		{
+			try
+			{
+				return ResourceManager.GetString(token);
+			}
+			catch (Exception)
+			{
+				return null;
+			}
+		}
+		
+		public static string Translate(string value, string prefix = "<#= defaultPrefix #>")
+		{
+			if (string.IsNullOrEmpty(value))
+				return value;
+			
+			var translated = TranslateToken(value);
+
+			if (translated != null)
+				return translated;
+			
+			//Try to just add the prefix to the 
+			translated = TranslateToken(prefix + value);
+			
+			if (translated != null)
+				return translated;
+
+			var token = Tokenize(value, prefix);
+			translated = TranslateToken(token);
+
+			if (translated == null && FailureLogger != null)
+				FailureLogger(value, token);
+
+			return translated ?? value;
+		}
+
+		public static string Tokenize(string value, string prefix = "<#= defaultPrefix #>")
+		{
+			return value == null 
+				? null 
+				: prefix + System.Text.RegularExpressions.Regex.Replace(value, "[^\\w_]", string.Empty);
+		}
+
+        public static string Get(string prefix, string suffix)
+        {
+            if (string.IsNullOrWhiteSpace(prefix))
+                return string.Empty;
+	        var value = ResourceManager.GetString(prefix + suffix, Culture);
+	        return value ?? string.Empty;
+        }
+
+        public static string[] GetAllThatBeginWith(string prefix)
+        {
+            if (string.IsNullOrWhiteSpace(prefix))
+                return null;
+            var prop = typeof(<#= resourcesClassName #>).GetProperties().Where(p => p.Name.StartsWith(prefix)).Select(p => p.Name).ToArray();
+            return prop;
+        }
+		
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        public static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("<#= resourcesNamespace #>.<#= resourcesName #>", typeof(<#= resourcesClassName #>).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        public static global::System.Globalization.CultureInfo Culture { get; set; }
+
+<#+ foreach (var translation in translations) { #>
+	  	/// <summary>
+		///   <#= translation.SafeContents #>
+		/// </summary>
+		public static string <#= translation.SafeElementName #>
+		{
+			get { return ResourceManager.GetString(Tokens.<#= translation.SafeElementName #>, Culture); }
+		}
+		
+<#+ } #>
+    }
+	
+	public static class Tokens
+	{		
+<#+ foreach (var translation in translations) { #>
+		public const string <#= translation.SafeElementName #> = "<#= translation.ElementName #>";
+<#+ } #>
+		
+		public static readonly string[] AllTokens = new []
+			{
+<#+ foreach (var translation in translations) { #>
+				<#= translation.SafeElementName #>,
+<#+ } #>			
+			};
+
+	}
+}<#+
+}
+
+public void AddPageWriteResx(IEnumerable<Translation> translations)
+{
+	using(var textWriter = new StringWriter(GenerationEnvironment))
+	{
+		var writer = new ResXResourceWriter(textWriter);
+		foreach(var translation in translations)
+		{
+			writer.AddResource(translation.ElementName, translation.TextContents);
+		}
+		writer.Generate();
+	}
+}#>

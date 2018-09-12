@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ebsco.svc.customerserviceportal", "ebsco.svc.customerserviceportal\ebsco.svc.customerserviceportal.csproj", "{AC2F4649-CA5B-427B-9650-9EE4A0164B61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ebsco.svc.customerserviceportal.test", "ebsco.svc.customerserviceportal.test\ebsco.svc.customerserviceportal.test.csproj", "{C1BB8117-1451-42F9-94A8-1508F5D15A24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ebsco.svc.webapi.framework", "ebsco.svc.webapi.framework\ebsco.svc.webapi.framework.csproj", "{00043F4D-1FC0-4F23-BBF8-8CE87FF4CE18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReallySimpleFeatureToggle.EBSCO.Client", "ReallySimpleFeatureToggle.EBSCO.Client\ReallySimpleFeatureToggle.EBSCO.Client.csproj", "{21CBB167-632D-48A6-A76D-79F2EB577488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ebsco.svc.customerserviceportal.translations", "ebsco.svc.customerserviceportal.translations\ebsco.svc.customerserviceportal.translations.csproj", "{D879A4CA-5340-4095-99BB-36EA0A8B6536}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC2F4649-CA5B-427B-9650-9EE4A0164B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2F4649-CA5B-427B-9650-9EE4A0164B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2F4649-CA5B-427B-9650-9EE4A0164B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2F4649-CA5B-427B-9650-9EE4A0164B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1BB8117-1451-42F9-94A8-1508F5D15A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1BB8117-1451-42F9-94A8-1508F5D15A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1BB8117-1451-42F9-94A8-1508F5D15A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1BB8117-1451-42F9-94A8-1508F5D15A24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00043F4D-1FC0-4F23-BBF8-8CE87FF4CE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00043F4D-1FC0-4F23-BBF8-8CE87FF4CE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00043F4D-1FC0-4F23-BBF8-8CE87FF4CE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00043F4D-1FC0-4F23-BBF8-8CE87FF4CE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CBB167-632D-48A6-A76D-79F2EB577488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CBB167-632D-48A6-A76D-79F2EB577488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CBB167-632D-48A6-A76D-79F2EB577488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CBB167-632D-48A6-A76D-79F2EB577488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D879A4CA-5340-4095-99BB-36EA0A8B6536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D879A4CA-5340-4095-99BB-36EA0A8B6536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D879A4CA-5340-4095-99BB-36EA0A8B6536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D879A4CA-5340-4095-99BB-36EA0A8B6536}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDDE34A8-F8C0-416C-A673-4F30B5EBD56A}
+	EndGlobalSection
+EndGlobal

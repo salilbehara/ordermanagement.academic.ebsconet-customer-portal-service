@@ -1,0 +1,320 @@
+﻿<#@ assembly name="System.Core"
+#><#@ assembly name="System.Data"
+#><#@ import namespace="System"
+#><#@ import namespace="System.Linq"
+#><#@ import namespace="System.Data"
+#><#@ import namespace="System.Data.SqlClient"
+#><#+
+public class TranslationsProvider
+{
+	private readonly string _connectionString;
+	private readonly StringBuilder _log;
+	
+	public TranslationsProvider(StringBuilder log, string connectionString)
+	{
+		_connectionString = connectionString;
+		_log = log;
+	}
+
+	public TranslationSet GetTranslationSet(string application)
+	{
+		var pages = GetPages(application);
+
+		var transGroups = pages.SelectMany(pageName => GetTranslations(application, pageName))
+			.GroupBy(t => new { t.SafeElementName, t.LocaleId })
+			.ToArray();
+		
+		var translations = new List<Translation>();
+		var duplications = new List<Translation>();
+		
+		foreach(var transGroup in transGroups)
+		{
+			var first = transGroup.First();
+			translations.Add(first);
+
+			if(transGroup.Any(t => t.ElementName != first.ElementName || t.TextContents != first.TextContents))
+				duplications.AddRange(transGroup);
+		}
+		
+		return new TranslationSet
+		{
+			Translations = translations.ToArray(),
+			Duplications = duplications.ToArray()
+		};
+	}
+	
+	public Translation[] GetTranslations(string application)
+	{
+		var pages = GetPages(application);
+
+		return pages.SelectMany(pageName => GetTranslations(application, pageName))
+			.ToArray();
+	}
+
+	public Translation[] GetTranslations(string application, string pageName)
+	{
+		var results = new List<Translation>();
+		using (var conn = new SqlConnection(_connectionString))
+		{
+			using (var cmd = conn.CreateCommand())
+			{
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.CommandText = "dbo.adm_Lang_GetElementsForFile";
+				cmd.Parameters.AddWithValue("@marketName", application);
+				cmd.Parameters.AddWithValue("@pageName", pageName);
+				conn.Open();
+				using (var reader = cmd.ExecuteReader())
+				{
+					while (reader.Read())
+					{
+						var translation = new Translation
+							{
+	                            LocaleId = (int)reader["CodePage"],
+								ElementName = (string)reader["ElementName"],
+								TextContents = (string)reader["TextContents"],
+							};
+						
+						if(!_localeFromLocaleId.ContainsKey(translation.LocaleId))
+							_log.AppendFormat("TranslationsProvider: Locale not found: {0}, Page: {1}, Token: {2}\n", translation.LocaleId, pageName, translation.ElementName);
+						else
+						{
+							translation.Locale = _localeFromLocaleId[translation.LocaleId];
+							results.Add(translation);
+						}
+					}
+				}
+			}
+		}
+									 
+		var english = results.Where(t => t.LocaleId == 1033).ToArray();
+
+		var englishClones = results.Where(t => t.LocaleId != 1033).Join(english,
+			t => new { t.ElementName, t.TextContents },
+			e => new { e.ElementName, e.TextContents },
+			(t, e) => t);
+									 
+		return results.Except(englishClones).Distinct().ToArray();
+	}
+
+	public string[] GetPages(string application)
+	{
+		var results = new List<string>();
+	 
+		using (var conn = new SqlConnection(_connectionString))
+		{
+			using (var cmd = conn.CreateCommand())
+			{
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.CommandText = "dbo.adm_Lang_GetPagesbyMarket";
+				cmd.Parameters.AddWithValue("@marketName", application);
+                conn.Open();
+				using (var reader = cmd.ExecuteReader())
+				{
+					while (reader.Read())
+					{
+						results.Add((string)reader["PageName"]);
+					}
+				}
+			}
+		}
+                                                                           
+		return results.ToArray();
+	}
+    private Dictionary<int, string> _localeFromLocaleId = new Dictionary<int, string>
+    { 
+		{1025, "ar-sa"},
+		{1026, "bg"},
+		{1027, "ca"},
+		{1028, "zh-tw"},
+		{1029, "cs"},
+		{1030, "da"},
+		{1031, "de-de"},
+		{1032, "el"},
+		{1033, "en-us"},
+		{1034, "es"},
+		{1035, "fi"},
+		{1036, "fr-fr"},
+		{1037, "he"},
+		{1038, "hu"},
+		{1039, "is"},
+		{1040, "it-it"},
+		{1041, "ja"},
+		{1042, "ko"},
+		{1043, "nl-nl"},
+		{1044, "nb-no"},
+		{1045, "pl"},
+		{1046, "pt-br"},
+		{1047, "rm"},
+		{1048, "ro"},
+		{1049, "ru"},
+		{1050, "hr"},
+		{1051, "sk"},
+		{1052, "sq"},
+		{1053, "sv-se"},
+		{1054, "th"},
+		{1055, "tr"},
+		{1056, "ur"},
+		{1057, "id"},
+		{1058, "uk"},
+		{1059, "be"},
+		{1060, "sl"},
+		{1061, "et"},
+		{1062, "lv"},
+		{1063, "lt"},
+		{1065, "fa"},
+		{1066, "vi"},
+		{1067, "hy"},
+		{1068, "az-az"},
+		{1069, "eu"},
+		{1070, "sb"},
+		{1071, "mk"},
+		{1072, "st"},
+		{1073, "ts"},
+		{1074, "tn"},
+		{1076, "xh"},
+		{1077, "zu"},
+		{1078, "af"},
+		{1080, "fo"},
+		{1081, "hi"},
+		{1082, "mt"},
+		{1084, "gd"},
+		{1085, "yi"},
+		{1086, "ms-my"},
+		{1089, "sw"},
+		{1091, "uz-uz"},
+		{1092, "tt"},
+		{1097, "ta"},
+		{1102, "mr"},
+		{1103, "sa"},
+		{2049, "ar-iq"},
+		{2052, "zh-cn"},
+		{2055, "de-ch"},
+		{2057, "en-gb"},
+		{2058, "es-mx"},
+		{2060, "fr-be"},
+		{2064, "it-ch"},
+		{2067, "nl-be"},
+		{2068, "nn-no"},
+		{2070, "pt-pt"},
+		{2072, "ro-mo"},
+		{2073, "ru-mo"},
+		{2074, "sr-sp"},
+		{2077, "sv-fi"},
+		{2092, "az-az"},
+		{2108, "gd-ie"},
+		{2110, "ms-bn"},
+		{2115, "uz-uz"},
+		{3073, "ar-eg"},
+		{3076, "zh-hk"},
+		{3079, "de-at"},
+		{3081, "en-au"},
+		{3082, "es-es"},
+		{3084, "fr-ca"},
+		{3098, "sr-sp"},
+		{4097, "ar-ly"},
+		{4100, "zh-sg"},
+		{4103, "de-lu"},
+		{4105, "en-ca"},
+		{4106, "es-gt"},
+		{4108, "fr-ch"},
+		{5121, "ar-dz"},
+		{5124, "zh-mo"},
+		{5127, "de-li"},
+		{5129, "en-nz"},
+		{5130, "es-cr"},
+		{5132, "fr-lu"},
+		{6145, "ar-ma"},
+		{6153, "en-ie"},
+		{6154, "es-pa"},
+		{7169, "ar-tn"},
+		{7177, "en-za"},
+		{7178, "es-do"},
+		{8193, "ar-om"},
+		{8201, "en-jm"},
+		{8202, "es-ve"},
+		{9217, "ar-ye"},
+		{9225, "en-cb"},
+		{9226, "es-co"},
+		{10241, "ar-sy"},
+		{10249, "en-bz"},
+		{10250, "es-pe"},
+		{11265, "ar-jo"},
+		{11273, "en-tt"},
+		{11274, "es-ar"},
+		{12289, "ar-lb"},
+		{12297, "en-zw"},
+		{12298, "es-ec"},
+		{13313, "ar-kw"},
+		{13321, "en-ph"},
+		{13322, "es-cl"},
+		{14337, "ar-ae"},
+		{14346, "es-uy"},
+		{15361, "ar-bh"},
+		{15370, "es-py"},
+		{16385, "ar-qa"},
+		{16393, "en-in"},
+		{16394, "es-bo"},
+		{17417, "en-my"},
+		{17418, "es-sv"},
+		{18441, "en-sg"},
+		{18442, "es-hn"},
+		{19466, "es-ni"},
+		{20490, "es-pr"},
+		{1256, "ar"} // Should be LocaleId 1
+    };
+}
+
+public class TranslationSet
+{
+	public Translation[] Translations { get; set; }
+	public Translation[] Duplications { get; set; }
+}
+
+public class Translation
+{
+	private string _elementName;
+	private string _textContents;
+	
+    public int LocaleId { get; set; }
+    public string Locale { get; set; }	
+	public string SafeElementName { get; set; }
+    public string SafeContents { get; set; }
+
+    public string ElementName 
+	{ 
+		get 
+		{ 
+			return _elementName; 
+		} 
+		set 
+		{ 
+			_elementName = value; 
+			SafeElementName = value == null ? null : Regex.Replace(value, "[^A-Za-z0-9]", "_");  
+		}
+	}
+	
+	public string TextContents 
+	{ 
+		get 
+		{ 
+			return _textContents; 
+		} 
+		set 
+		{ 
+			_textContents = value; 
+			SafeContents = value == null ? null : value.Replace("\'", "\\'")
+	                .Replace("\"", "\\\"")
+	                .Replace("\\", "\\\\")
+	                .Replace("\0", "\\0")
+                    .Replace("\a", "\\a")
+                    .Replace("\b", "\\b")
+                    .Replace("\f", "\\f")
+	                .Replace("\n", "\\n")
+	                .Replace("\r", "\\r")
+	                .Replace("\t", "\\t")
+					.Replace("<", "&lt;")
+					.Replace(">", "&gt;");  
+		}
+	}
+}
+ #>

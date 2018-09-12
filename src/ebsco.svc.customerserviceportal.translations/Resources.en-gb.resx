@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EN_NoticeEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EN_Characters1" xml:space="preserve">
+    <value>Characters 1 &amp; 2 of Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_Characters2" xml:space="preserve">
+    <value>Characters 2 - 5 of Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_Characters3" xml:space="preserve">
+    <value>Characters 3 - 6 of Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_Characters5" xml:space="preserve">
+    <value>Characters 5 &amp; 6 of Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_ChildISSN" xml:space="preserve">
+    <value>Comes with ISSN</value>
+  </data>
+  <data name="EN_First3" xml:space="preserve">
+    <value>First 3 Characters of Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_FundCodeHEGIS" xml:space="preserve">
+    <value>Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_FundCodeHEGIS1stCharacter" xml:space="preserve">
+    <value>Fund Code/HEGIS 1st Character</value>
+  </data>
+  <data name="EN_HEGIS" xml:space="preserve">
+    <value>HEGIS</value>
+  </data>
+  <data name="EN_MainISSN" xml:space="preserve">
+    <value>Main ISSN</value>
+  </data>
+  <data name="EN_TitleNamewithIndicativePrices" xml:space="preserve">
+    <value>Title Name with Indicative Prices</value>
+  </data>
+  <data name="EN_emailus2" xml:space="preserve">
+    <value>e-mail us</value>
+  </data>
+  <data name="EN_IFYOUCONTINUEWI" xml:space="preserve">
+    <value>IF YOU CONTINUE WITH THIS ACTION ALL CHANGES YOU HAVE MADE ON THIS PAGE WILL BE IGNORED!!! ARE YOU SURE YOU WANT TO EXIT FROM THIS PAGE?</value>
+  </data>
+  <data name="EN_Inovative" xml:space="preserve">
+    <value>Innovative</value>
+  </data>
+  <data name="EN_ShipmentMessage" xml:space="preserve">
+    <value>Please check the contents of the package immediately. Missing/Damaged issues must be reported within 2 weeks for titles on packing list.</value>
+  </data>
+  <data name="EN_TSC_AU" xml:space="preserve">
+    <value>Address Unknown</value>
+  </data>
+  <data name="EN_TSC_MB" xml:space="preserve">
+    <value>Part Of Membership/Combination</value>
+  </data>
+  <data name="EN_TSC_MP" xml:space="preserve">
+    <value>Also Available as Part of Membership/Combination</value>
+  </data>
+  <data name="EN_TSC_OD" xml:space="preserve">
+    <value>Order Direct</value>
+  </data>
+  <data name="EN_TSC_SQ" xml:space="preserve">
+    <value>Alphabetisation Sequence</value>
+  </data>
+  <data name="EN_ErmCustomLabel_RenewalAdvanceNotice" xml:space="preserve">
+    <value>Renewal Advance Notice </value>
+  </data>
+  <data name="EN_EmailQuestions2" xml:space="preserve">
+    <value>For questions regarding the dispatch information on this order, please &lt;a href='mailto:{0}'&gt;e-mail us&lt;/a&gt;</value>
+  </data>
+  <data name="EN_CurrentOrderTotalCost" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EN_CC_4X" xml:space="preserve">
+    <value>Greece (Euro)</value>
+  </data>
+  <data name="EN_CC_BPMaster" xml:space="preserve">
+    <value>Pounds Sterling</value>
+  </data>
+  <data name="EN_CC_CZ" xml:space="preserve">
+    <value>Czech Republic Koruna</value>
+  </data>
+  <data name="EN_CC_MT" xml:space="preserve">
+    <value>Malta (Maltese Pounds)</value>
+  </data>
+  <data name="EN_City" xml:space="preserve">
+    <value>Town</value>
+  </data>
+  <data name="EN_COOC_KZ" xml:space="preserve">
+    <value>Kazakhstan</value>
+  </data>
+  <data name="EN_COOC_WS" xml:space="preserve">
+    <value>Samoa, Independent State</value>
+  </data>
+  <data name="EN_CustomerZipCode" xml:space="preserve">
+    <value>Customer Postcode</value>
+  </data>
+  <data name="EN_EndDate" xml:space="preserve">
+    <value>Expiry Date</value>
+  </data>
+  <data name="EN_ExactHEGIS" xml:space="preserve">
+    <value>Exact Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_FC_AI" xml:space="preserve">
+    <value>A&amp;I Service</value>
+  </data>
+  <data name="EN_FC_DK" xml:space="preserve">
+    <value>Floppy disk</value>
+  </data>
+  <data name="EN_FC_NR" xml:space="preserve">
+    <value>Non-renewable</value>
+  </data>
+  <data name="EN_FC_OA" xml:space="preserve">
+    <value>Online Print + E-mail</value>
+  </data>
+  <data name="EN_FC_OB" xml:space="preserve">
+    <value>Online + Print + CD + E-mail</value>
+  </data>
+  <data name="EN_FC_OE" xml:space="preserve">
+    <value>Online + E-mail</value>
+  </data>
+  <data name="EN_FC_OF" xml:space="preserve">
+    <value>Online + Fax</value>
+  </data>
+  <data name="EN_FC_OP" xml:space="preserve">
+    <value>Online + Print</value>
+  </data>
+  <data name="EN_FC_PE" xml:space="preserve">
+    <value>Print + E-mail</value>
+  </data>
+  <data name="EN_FC_PP" xml:space="preserve">
+    <value>Print + Online with upcharge</value>
+  </data>
+  <data name="EN_FreqC_AN" xml:space="preserve">
+    <value>Annual—1 Per Year</value>
+  </data>
+  <data name="EN_FreqC_BE" xml:space="preserve">
+    <value>Biennially—1 Every 2 Years</value>
+  </data>
+  <data name="EN_FreqC_BM" xml:space="preserve">
+    <value>Bimonthly—5 Or 6 Per Year (Every 2 Months)</value>
+  </data>
+  <data name="EN_FreqC_BW" xml:space="preserve">
+    <value>Biweekly—25 Or 26 Per Year (Every 2 Weeks)</value>
+  </data>
+  <data name="EN_FreqC_DA" xml:space="preserve">
+    <value>Daily—260 Or 312 Per Year (Monday To Friday Or Saturday)</value>
+  </data>
+  <data name="EN_FreqC_DS" xml:space="preserve">
+    <value>Daily &amp; Sunday—365 Per Year</value>
+  </data>
+  <data name="EN_FreqC_MO" xml:space="preserve">
+    <value>Monthly—8 To 12 Per Year (Consecutive Months)</value>
+  </data>
+  <data name="EN_FreqC_QR" xml:space="preserve">
+    <value>Quarterly—4 Per Year (1 Every 3 Months Or Season)</value>
+  </data>
+  <data name="EN_FreqC_SA" xml:space="preserve">
+    <value>Semiannually—2 Per Year (Every 6 Months)</value>
+  </data>
+  <data name="EN_FreqC_SM" xml:space="preserve">
+    <value>Semimonthly—24 Per Year (Twice A Month)</value>
+  </data>
+  <data name="EN_FreqC_SU" xml:space="preserve">
+    <value>Sunday Only—52 Per Year</value>
+  </data>
+  <data name="EN_FreqC_SW" xml:space="preserve">
+    <value>Semiweekly—104 Per Year (Twice A Week)</value>
+  </data>
+  <data name="EN_FreqC_TE" xml:space="preserve">
+    <value>Triennially—1 Every 3 Years</value>
+  </data>
+  <data name="EN_FreqC_TQ" xml:space="preserve">
+    <value>Triquarterly—3 Per Year (1 Every 4 Months)</value>
+  </data>
+  <data name="EN_FreqC_WK" xml:space="preserve">
+    <value>Weekly—50 To 54 Per Year</value>
+  </data>
+  <data name="EN_State" xml:space="preserve">
+    <value>County</value>
+  </data>
+  <data name="EN_ZipCode" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+  <data name="EN_ByPublisherName" xml:space="preserve">
+    <value>By Publisher Name</value>
+  </data>
+  <data name="EN_ByTitleName" xml:space="preserve">
+    <value>By Title Name</value>
+  </data>
+  <data name="EN_Recipientshasbe" xml:space="preserve">
+    <value>Recipient has been removed from the group.</value>
+  </data>
+  <data name="EN_Recipientshasbe2" xml:space="preserve">
+    <value>Recipient has been removed from the circulation list.</value>
+  </data>
+  <data name="EN_EmailAddress" xml:space="preserve">
+    <value>E-mail Address</value>
+  </data>
+  <data name="EN_Pleaseenteraval2" xml:space="preserve">
+    <value>Please enter a valid e-mail address to complete this request.</value>
+  </data>
+  <data name="EN_YourFeedbackhas" xml:space="preserve">
+    <value>Your Feedback has been submitted. Thank You.</value>
+  </data>
+  <data name="EN_Copyright" xml:space="preserve">
+    <value>&amp;copy; Copyright EBSCO Industries, Inc. All rights reserved.</value>
+  </data>
+  <data name="EN_DivisionOf" xml:space="preserve">
+    <value>is a division of EBSCO Industries, Inc.</value>
+  </data>
+  <data name="EN_EmailCSR" xml:space="preserve">
+    <value>E-mail Us</value>
+  </data>
+  <data name="EN_GeneralEmailAddress" xml:space="preserve">
+    <value>General E-mail Address</value>
+  </data>
+  <data name="EN_Pleaseenteraval23" xml:space="preserve">
+    <value>Please enter a valid general e-mail address</value>
+  </data>
+  <data name="EN_PleaseNote" xml:space="preserve">
+    <value>Please note: if you choose to complete this process your access to the old EBSCONET system will be disabled.</value>
+  </data>
+  <data name="EN_Credit_Total" xml:space="preserve">
+    <value>Credit Total </value>
+  </data>
+  <data name="EN_AuthorizeAllRenewals" xml:space="preserve">
+    <value>Authorise All Renewals</value>
+  </data>
+  <data name="EN_AuthorizeAllRenewalsMsg" xml:space="preserve">
+    <value>You are about to authorise &lt;$NumofRenewals$&gt; renewals. Click confirm or cancel to proceed. This process will take approximately &lt;$NumofMinutes$&gt; minute(s).</value>
+  </data>
+  <data name="EN_NoRenewals" xml:space="preserve">
+    <value>You have no renewals to authorise in your current search. All renewals in your current search may be set to Hold. Click Cancel to return to My Renewals.</value>
+  </data>
+  <data name="EN_PleaseWait23" xml:space="preserve">
+    <value>Authorising Renewals, please wait...</value>
+  </data>
+  <data name="EN_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EN_OurSecurity" xml:space="preserve">
+    <value>Welcome to EBSCONET. We hope you will find EBSCONET a valuable tool for managing your subscriptions. To continue, you must select a location (subscriber). Please search for and select the required location using the options below. This selection can be changed at any time. Thank You!</value>
+  </data>
+  <data name="EN_OurSecurity2" xml:space="preserve">
+    <value>Your current subscriber has been removed. Please select another subscriber to work with. Thank You!</value>
+  </data>
+  <data name="EN_Zip" xml:space="preserve">
+    <value>Post code</value>
+  </data>
+  <data name="EN_DM_FIR" xml:space="preserve">
+    <value>First Class Post</value>
+  </data>
+  <data name="EN_DM_SEC" xml:space="preserve">
+    <value>Second Class Post</value>
+  </data>
+  <data name="EN_InvalidTermEnte2" xml:space="preserve">
+    <value>Invalid Term Entered. Term must be between 1 and 3 Years</value>
+  </data>
+  <data name="EN_InvalidTermEnte23" xml:space="preserve">
+    <value>Invalid Term Entered. Term must be between 1 and 35 Months</value>
+  </data>
+  <data name="EN_NewRenewal23" xml:space="preserve">
+    <value>New/Renewal</value>
+  </data>
+  <data name="EN_Pleaseenterthet" xml:space="preserve">
+    <value>Please enter the term you require</value>
+  </data>
+  <data name="EN_Pleaseselectana" xml:space="preserve">
+    <value>Please select an active subscriber</value>
+  </data>
+  <data name="EN_RegistrationID" xml:space="preserve">
+    <value>Registration Number</value>
+  </data>
+  <data name="EN_IFYOUCONTINUEWI2" xml:space="preserve">
+    <value>IF YOU CONTINUE WITH THIS ACTION RECIPIENTS WILL NOT BE ADDED TO THIS GROUP!!! ARE YOU SURE YOU WANT TO EXIT FROM THIS PAGE?</value>
+  </data>
+  <data name="EN_AbstractIndex" xml:space="preserve">
+    <value>Abstract Index</value>
+  </data>
+  <data name="EN_Access" xml:space="preserve">
+    <value>Access:</value>
+  </data>
+  <data name="EN_LC_EU" xml:space="preserve">
+    <value>English/Ukrainian</value>
+  </data>
+  <data name="EN_SummaryofNonUSPublications" xml:space="preserve">
+    <value>Summary of Publications by Country/Language </value>
+  </data>
+  <data name="EN_AuthorizedHeader" xml:space="preserve">
+    <value>Authorised</value>
+  </data>
+  <data name="EN_AuthorizedInProcess" xml:space="preserve">
+    <value>Renewals Authorised and Processed</value>
+  </data>
+  <data name="EN_ClaimAuthorizedFlag" xml:space="preserve">
+    <value>Claim Authorised Flag</value>
+  </data>
+  <data name="EN_DateAuthorizedHeader" xml:space="preserve">
+    <value>Date Authorised</value>
+  </data>
+  <data name="EN_EveryYear" xml:space="preserve">
+    <value>Every Year</value>
+  </data>
+  <data name="EN_OrderExpirationDate" xml:space="preserve">
+    <value>Order Expiry Date</value>
+  </data>
+  <data name="EN_Pleaseenteraval2345678910" xml:space="preserve">
+    <value>Please enter a valid title number</value>
+  </data>
+  <data name="EN_PR_12" xml:space="preserve">
+    <value>Issue(s) Sent At Time Of Publication - Please Check Again</value>
+  </data>
+  <data name="EN_PR_17" xml:space="preserve">
+    <value>Expiry Extended</value>
+  </data>
+  <data name="EN_PR_18" xml:space="preserve">
+    <value>Issue(s) Not Available - Expiry Extended</value>
+  </data>
+  <data name="EN_PR_20" xml:space="preserve">
+    <value>Issue(s) Not Sent</value>
+  </data>
+  <data name="EN_PR_26" xml:space="preserve">
+    <value>For Refund, Issue(s) Must Be Returned In Resaleable Condition</value>
+  </data>
+  <data name="EN_PR_32" xml:space="preserve">
+    <value>Refund Being Processed</value>
+  </data>
+  <data name="EN_RenewalAuthorizedFlag" xml:space="preserve">
+    <value>Renewal Authorised Flag</value>
+  </data>
+  <data name="EN_RSC_A" xml:space="preserve">
+    <value>Authorised</value>
+  </data>
+  <data name="EN_RSC_R" xml:space="preserve">
+    <value>Released</value>
+  </data>
+  <data name="EN_TSubC_GE" xml:space="preserve">
+    <value>General Works</value>
+  </data>
+  <data name="EN_SelectRate" xml:space="preserve">
+    <value>Please select a rate</value>
+  </data>
+  <data name="EN_AlphabetizationSequence" xml:space="preserve">
+    <value>Alphabetisation Sequence</value>
+  </data>
+  <data name="EN_PanAmForeignOrderDirect" xml:space="preserve">
+    <value>Pan Am &amp; Foreign Order Direct</value>
+  </data>
+  <data name="EN_USCanadaOrderDirect" xml:space="preserve">
+    <value>US &amp; Canada Order Direct</value>
+  </data>
+  <data name="EN_ChangeRequestConfirm" xml:space="preserve">
+    <value>Change Request—Confirmation</value>
+  </data>
+  <data name="EN_YourBulletin" xml:space="preserve">
+    <value>Your Bulletin of Serials Changes Full Catalogue (Title Changes) E-mail has been submitted. Thank you for taking the time to advise us of these changes.</value>
+  </data>
+  <data name="EN_AUserNameandPas" xml:space="preserve">
+    <value>A User Name and Password already exists in the database. Please pick a different User Name and/or Password.</value>
+  </data>
+  <data name="EN_AuthorizeRenewals" xml:space="preserve">
+    <value>Authorise Renewals</value>
+  </data>
+  <data name="EN_ClaimingEmailAddress" xml:space="preserve">
+    <value>Claiming E-mail Address</value>
+  </data>
+  <data name="EN_DefaultFundCodeHEGIS" xml:space="preserve">
+    <value>Default Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_EJournalPackage" xml:space="preserve">
+    <value>E-Journal Package Title Change</value>
+  </data>
+  <data name="EN_EmailAccount" xml:space="preserve">
+    <value>E-mail account information to this user:</value>
+  </data>
+  <data name="EN_OrderingEmailAddress" xml:space="preserve">
+    <value>Ordering E-mail Address</value>
+  </data>
+  <data name="EN_OwnershipAccess" xml:space="preserve">
+    <value>Ownership/Access</value>
+  </data>
+  <data name="EN_Pleaseenteraval234" xml:space="preserve">
+    <value>Please enter a valid ordering e-mail address</value>
+  </data>
+  <data name="EN_Pleaseenteraval2345" xml:space="preserve">
+    <value>Please enter a valid claiming e-mail address</value>
+  </data>
+  <data name="EN_Pleaseenteraval23456" xml:space="preserve">
+    <value>Please enter a valid renewal e-mail address</value>
+  </data>
+  <data name="EN_Pleaseenteraval234567891011" xml:space="preserve">
+    <value>Please enter a valid e-mail address</value>
+  </data>
+  <data name="EN_ReleaseRenewals" xml:space="preserve">
+    <value>Release Renewals</value>
+  </data>
+  <data name="EN_RenewalEmailAddress" xml:space="preserve">
+    <value>Renewal E-mail Address</value>
+  </data>
+  <data name="EN_TitlesWithClaimingRestrictions" xml:space="preserve">
+    <value>Titles with claiming restrictions</value>
+  </data>
+  <data name="EN_UserAuthorizationLevels" xml:space="preserve">
+    <value>User Authorisation Levels</value>
+  </data>
+  <data name="EN_ViewModifyOrders" xml:space="preserve">
+    <value>Orders (view and modify existing orders)</value>
+  </data>
+  <data name="EN_AccessRestrictionsNote" xml:space="preserve">
+    <value>Access restrictions note</value>
+  </data>
+  <data name="EN_AdditionalBackFileAvailable" xml:space="preserve">
+    <value>Additional back-file available</value>
+  </data>
+  <data name="EN_AdditionalBackFileNotes" xml:space="preserve">
+    <value>Additional back-file notes</value>
+  </data>
+  <data name="EN_BackFileInformation" xml:space="preserve">
+    <value>Back-file Information</value>
+  </data>
+  <data name="EN_BasicInformation" xml:space="preserve">
+    <value>Organisation Information</value>
+  </data>
+  <data name="EN_EBSCORegistersAutomatically" xml:space="preserve">
+    <value>EBSCO Registers automatically</value>
+  </data>
+  <data name="EN_HostSiteInstructions" xml:space="preserve">
+    <value>Host site instructions/note</value>
+  </data>
+  <data name="EN_OrganizationName" xml:space="preserve">
+    <value>Organisation name</value>
+  </data>
+  <data name="EN_OrganizationNumber" xml:space="preserve">
+    <value>Organisation number</value>
+  </data>
+  <data name="EN_RegisteringatthePublisherSite" xml:space="preserve">
+    <value>Registering at the Publisher Site</value>
+  </data>
+  <data name="EN_RegistrationAtPublisherSiteRequired" xml:space="preserve">
+    <value>Registration at publisher site required</value>
+  </data>
+  <data name="EN_RegistrationIDSameAsPID" xml:space="preserve">
+    <value>Registration Number same as Publisher Identification</value>
+  </data>
+  <data name="EN_RegistrationIDSameForAllTitles" xml:space="preserve">
+    <value>Registration Number same for all titles</value>
+  </data>
+  <data name="EN_RegistrationRequiredForEachTitle" xml:space="preserve">
+    <value>Registration required for each title</value>
+  </data>
+  <data name="EN_ThirdPartyContentHostDetails" xml:space="preserve">
+    <value>Third Party Content Host Details</value>
+  </data>
+  <data name="EN_PleaseenterEmai" xml:space="preserve">
+    <value>Please enter E-mail Address</value>
+  </data>
+  <data name="EN_PleaseenterZIP" xml:space="preserve">
+    <value>Please enter post code</value>
+  </data>
+  <data name="EN_CheckNumber" xml:space="preserve">
+    <value>Cheque Number</value>
+  </data>
+  <data name="EN_CheckPaymentNu" xml:space="preserve">
+    <value>Cheque/Payment Number</value>
+  </data>
+  <data name="EN_CombinationMembershipPackage" xml:space="preserve">
+    <value>Combination/Membership/Package</value>
+  </data>
+  <data name="EN_EBSCOResources" xml:space="preserve">
+    <value>EBSCO Resources</value>
+  </data>
+  <data name="EN_OtherResources" xml:space="preserve">
+    <value>Other Resources</value>
+  </data>
+  <data name="EN_PAYM_C" xml:space="preserve">
+    <value>Cheque</value>
+  </data>
+  <data name="EN_StartEndDate" xml:space="preserve">
+    <value>Start/Expiry Date</value>
+  </data>
+  <data name="EN_Startdatecannot" xml:space="preserve">
+    <value>Beginning date cannot be later than ending date</value>
+  </data>
+  <data name="EN_Titles" xml:space="preserve">
+    <value>Titles</value>
+  </data>
+  <data name="EN_AnEmail" xml:space="preserve">
+    <value>An email will be sent to your CSR to confirm your cancellation. The status of your order will not change until your CSR has updated this change. Thank You!</value>
+  </data>
+  <data name="EN_AtExpiration" xml:space="preserve">
+    <value>On Expiry</value>
+  </data>
+  <data name="EN_CancelDelete" xml:space="preserve">
+    <value>Cancel Deletion</value>
+  </data>
+  <data name="EN_ConfirmDelete" xml:space="preserve">
+    <value>Confirm Deletion</value>
+  </data>
+  <data name="EN_FundCodeHEGIS23" xml:space="preserve">
+    <value>Fund Code/HEGIS Totals</value>
+  </data>
+  <data name="EN_HegisGrandTotal" xml:space="preserve">
+    <value>Fund Code/HEGIS Grand Total:</value>
+  </data>
+  <data name="EN_Therewasaproble" xml:space="preserve">
+    <value>There was a problem entering your claim. Please contact your Customer Service Representative. </value>
+  </data>
+  <data name="EN_RecipientAdded" xml:space="preserve">
+    <value>Recipient has been added to selected Groups and Circulation List</value>
+  </data>
+  <data name="EN_Complimentary" xml:space="preserve">
+    <value>Complimentary online training is available. To view a schedule of classes and register for one of these interactive sessions, visit &lt;a href="http://training.ebsco.com" target="_blank"&gt;http://training.ebsco.com&lt;/a&gt;.</value>
+  </data>
+  <data name="EN_RenewalsAuth" xml:space="preserve">
+    <value>Renewals Authorised &amp; Processed</value>
+  </data>
+  <data name="EN_ToView" xml:space="preserve">
+    <value>To view a written overview of EBSCONET, click &lt;$HelpLink$&gt;. The following How To audiovisual demonstrations are available as a form of recorded training. You must have Adobe Flash installed on your browser in order to view the audiovisual demonstration. To download the latest version, &lt;a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" target="_blank"&gt;click here&lt;/a&gt;. NOTE: After you click a link to access a How To demo, it may take a few moments for it to appear.</value>
+  </data>
+  <data name="EN_AdditionalEmail" xml:space="preserve">
+    <value>Additional E-mail</value>
+  </data>
+  <data name="EN_ClaimRejectedMSG" xml:space="preserve">
+    <value>This claim has been forwarded to your Customer Service Representative for special handling. No further action is required on your part. Once your CSR has processed this claim, it will appear in your claim history.</value>
+  </data>
+  <data name="EN_CR_03" xml:space="preserve">
+    <value>Duplicates Being Received Combine/Extend/Advise On New Expr</value>
+  </data>
+  <data name="EN_CR_06" xml:space="preserve">
+    <value>Expiry Notices Being Received/Correct And Advise</value>
+  </data>
+  <data name="EN_CR_10" xml:space="preserve">
+    <value>Started Wrong Date/Send Issues Missing/Adjust Expiry</value>
+  </data>
+  <data name="EN_CR_11" xml:space="preserve">
+    <value>Subscription Began Too Soon -- Expiry Date Should Be</value>
+  </data>
+  <data name="EN_CR_12" xml:space="preserve">
+    <value>Verify Expiry</value>
+  </data>
+  <data name="EN_CR_23" xml:space="preserve">
+    <value>Please Advise On Current Publication Schedule</value>
+  </data>
+  <data name="EN_CR_24" xml:space="preserve">
+    <value>Subscription Cancelled - Stop sending</value>
+  </data>
+  <data name="EN_CR_25" xml:space="preserve">
+    <value>Extend For Issues Unavailable And Advise On New Expiry.</value>
+  </data>
+  <data name="EN_CR_27" xml:space="preserve">
+    <value>Bill Later-Follow-Up Request</value>
+  </data>
+  <data name="EN_CR_28" xml:space="preserve">
+    <value>Supply Issue(s) If Not Available Extend Or Refund</value>
+  </data>
+  <data name="EN_CR_29" xml:space="preserve">
+    <value>Duplicate Issues Received/Advise On Disposal</value>
+  </data>
+  <data name="EN_CR_30" xml:space="preserve">
+    <value>Begin Free Subscription; Continue Until Cancellation Requested</value>
+  </data>
+  <data name="EN_CR_32" xml:space="preserve">
+    <value>E-Mail Sent To Publisher.</value>
+  </data>
+  <data name="EN_CR_34" xml:space="preserve">
+    <value>Issue(s) Sent From Ebsco Missing Copy Bank</value>
+  </data>
+  <data name="EN_CR_36" xml:space="preserve">
+    <value>Back Issues Not Required. Please Extend And Advise On New Expiry</value>
+  </data>
+  <data name="EN_CRC_03" xml:space="preserve">
+    <value>Customer Ordered Directly</value>
+  </data>
+  <data name="EN_CRC_10" xml:space="preserve">
+    <value>Order Pulled Before Clearing Entered</value>
+  </data>
+  <data name="EN_DefaultEmail" xml:space="preserve">
+    <value>Default E-mail</value>
+  </data>
+  <data name="EN_CustomerAddress234" xml:space="preserve">
+    <value>Customer Address 4 </value>
+  </data>
+  <data name="EN_CustomerZip" xml:space="preserve">
+    <value>Customer Zip </value>
+  </data>
+  <data name="EN_OnOrder" xml:space="preserve">
+    <value>On Order - Comma Delimited</value>
+  </data>
+  <data name="EN_PleaseWait" xml:space="preserve">
+    <value>Please Wait</value>
+  </data>
+  <data name="EN_ClaimingRestrictions" xml:space="preserve">
+    <value>Titles with claiming restrictions</value>
+  </data>
+  <data name="EN_Forquestionsreg" xml:space="preserve">
+    <value>For questions regarding the dispatch information on this order, please e-mail us</value>
+  </data>
+  <data name="EN_ReturntoRenewal" xml:space="preserve">
+    <value>Return to Renewals Authorized and Processed </value>
+  </data>
+  <data name="EN_ConfirmDesc" xml:space="preserve">
+    <value>You are about to release to the ordering system all renewals that have been marked as authorised. Once you process this page you will not be able to make any additional changes to those renewals that are currently marked as authorised.</value>
+  </data>
+  <data name="EN_PleaseConfirm" xml:space="preserve">
+    <value>Please Confirm this action below or press CANCEL if you are not ready to process the authorised renewals.</value>
+  </data>
+  <data name="EN_RenewalReleaseNote" xml:space="preserve">
+    <value>This action commits your organisation to pay resulting renewal invoices in full upon receipt.</value>
+  </data>
+  <data name="EN_ByFundCode" xml:space="preserve">
+    <value>By Fund Code</value>
+  </data>
+  <data name="EN_Authenticatedby" xml:space="preserve">
+    <value>Authenticated by EJS</value>
+  </data>
+  <data name="EN_AvailableonEJS" xml:space="preserve">
+    <value>Available on EJS</value>
+  </data>
+  <data name="EN_CustomizeReports" xml:space="preserve">
+    <value>Customise Reports</value>
+  </data>
+  <data name="EN_IPAuthenticationSupported" xml:space="preserve">
+    <value>IP authentication supported</value>
+  </data>
+  <data name="EN_LCCName" xml:space="preserve">
+    <value>LCC Name</value>
+  </data>
+  <data name="EN_RegistrationIDChangesAnnually" xml:space="preserve">
+    <value>Registration Number changes annually</value>
+  </data>
+  <data name="EN_RegistrationIDRequired" xml:space="preserve">
+    <value>Registration Number required</value>
+  </data>
+  <data name="EN_ThirdPartyContentHost" xml:space="preserve">
+    <value>Third party content host</value>
+  </data>
+  <data name="EN_CancelRelease" xml:space="preserve">
+    <value>Cancelled Release of Authorised Renewals</value>
+  </data>
+  <data name="EN_Title2" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="EN_RenewalWarning" xml:space="preserve">
+    <value>Renewal prices shown are subject to change based on changes in publisher prices and/or currency conversion rates. Rates selected for format changes will be verified when renewal order is submitted. Open Access and “Free on Request” titles may incur a charge of 15 GBP. </value>
+  </data>
+  <data name="EN_AllTitlesPublication" xml:space="preserve">
+    <value>Title Search - Publication Items</value>
+  </data>
+  <data name="EN_AuthorizedBy" xml:space="preserve">
+    <value>Authorised By</value>
+  </data>
+  <data name="EN_ChangeColor" xml:space="preserve">
+    <value>Change colour</value>
+  </data>
+  <data name="EN_DefaultColorScheme" xml:space="preserve">
+    <value>Default Colour Scheme</value>
+  </data>
+  <data name="EN_ExcelMCB" xml:space="preserve">
+    <value>EXCEL file of Available Titles</value>
+  </data>
+  <data name="EN_HasBeenSucc" xml:space="preserve">
+    <value>has been successfully added to the EBSCONET Mailing List. You should receive an e-mail confirmation shortly.</value>
+  </data>
+  <data name="EN_HEGISReport" xml:space="preserve">
+    <value>HEGIS Report</value>
+  </data>
+  <data name="EN_KnowIssue" xml:space="preserve">
+    <value>If you would like a PDF version of this glossary please click &lt;a href="&lt;$REPGLOSS$&gt;" target="_blank"&gt;here&lt;/a&gt;</value>
+  </data>
+  <data name="EN_MailListInfo" xml:space="preserve">
+    <value>The EBSCONET mailing list is an e-mail-based discussion group about the EBSCONET subscription management service. Topics typically include questions about how the system works, tips for using the system more effectively and much more.</value>
+  </data>
+  <data name="EN_Pleaseenteranem" xml:space="preserve">
+    <value>Please enter an e-mail address to complete this request.</value>
+  </data>
+  <data name="EN_RenewalsAuthorized" xml:space="preserve">
+    <value>Renewals Authorised Report</value>
+  </data>
+  <data name="EN_Theemailaddress" xml:space="preserve">
+    <value>The e-mail address</value>
+  </data>
+  <data name="EN_AnEmail2" xml:space="preserve">
+    <value>A change has been made to the Publisher Identification/Registration Number. Such changes will be applied by your CSR who will also confirm these changes with the publisher. An e-mail will be sent to your CSR to notify them of these modifications. Thank You!</value>
+  </data>
+  <data name="EN_SubChange" xml:space="preserve">
+    <value>A change has been made to the Subscriber Information. Such changes will be applied by your CSR who will also confirm these changes with the publisher. An e-mail will be sent to your CSR to notify them of these modifications. Thank you.</value>
+  </data>
+  <data name="EN_NotAuth" xml:space="preserve">
+    <value>You are not authorised to access this page. Should you feel that you have received this message in error, please &lt;a href="customerservice.aspx"&gt;contact us&lt;/a&gt;.</value>
+  </data>
+  <data name="EN_56k" xml:space="preserve">
+    <value>56Kbps (Standard):</value>
+  </data>
+  <data name="EN_AllRequested" xml:space="preserve">
+    <value>All requested and available reports older than 30 days will be deleted daily.</value>
+  </data>
+  <data name="EN_BulletinFullCatalog" xml:space="preserve">
+    <value>Bulletin of Serials Changes Full Catalogue</value>
+  </data>
+  <data name="EN_ByCommentLine1" xml:space="preserve">
+    <value>By Comment Line 1</value>
+  </data>
+  <data name="EN_ByCommentLine2" xml:space="preserve">
+    <value>By Comment Line 2</value>
+  </data>
+  <data name="EN_ByCountryofOrig" xml:space="preserve">
+    <value>By Country of Origin</value>
+  </data>
+  <data name="EN_ByCountryOfOrig2" xml:space="preserve">
+    <value>Country of Origin with Price</value>
+  </data>
+  <data name="EN_ByCustomSort" xml:space="preserve">
+    <value>By Custom Sort</value>
+  </data>
+  <data name="EN_ByDepartment/Su" xml:space="preserve">
+    <value>By Department/Subscriber</value>
+  </data>
+  <data name="EN_ByDescendingOrd" xml:space="preserve">
+    <value>Descending Order by Price</value>
+  </data>
+  <data name="EN_ByDivisionAffil" xml:space="preserve">
+    <value>By Division Affiliation</value>
+  </data>
+  <data name="EN_ByFirst3Charact" xml:space="preserve">
+    <value>First 3 Characters of Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_ByFundCode/HEGI" xml:space="preserve">
+    <value>Default Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_ByFundCode/HEGI2" xml:space="preserve">
+    <value>Fund Code/HEGIS 1st Character</value>
+  </data>
+  <data name="EN_ByIntegratedLib" xml:space="preserve">
+    <value>Integrated Library System (ILS)</value>
+  </data>
+  <data name="EN_ByLibraryContro" xml:space="preserve">
+    <value>By Library Control Data</value>
+  </data>
+  <data name="EN_byMonth" xml:space="preserve">
+    <value>by Month</value>
+  </data>
+  <data name="EN_ByPrice" xml:space="preserve">
+    <value>By Price</value>
+  </data>
+  <data name="EN_ByPublisherNumb" xml:space="preserve">
+    <value>By Publisher Number</value>
+  </data>
+  <data name="EN_BySpecialDepart" xml:space="preserve">
+    <value>By Special Department</value>
+  </data>
+  <data name="EN_BySpecialDepart2" xml:space="preserve">
+    <value>Special Department/Special Name</value>
+  </data>
+  <data name="EN_BySpecialName" xml:space="preserve">
+    <value>By Special Name</value>
+  </data>
+  <data name="EN_BySpecialVersio" xml:space="preserve">
+    <value>By Special Version</value>
+  </data>
+  <data name="EN_BySubject" xml:space="preserve">
+    <value>Subject Category</value>
+  </data>
+  <data name="EN_ByTitleSequence" xml:space="preserve">
+    <value>By Title Sequence Control</value>
+  </data>
+  <data name="EN_ByTitleWithPage" xml:space="preserve">
+    <value>By Title with Page Totals</value>
+  </data>
+  <data name="EN_ByTSC" xml:space="preserve">
+    <value>By TSC</value>
+  </data>
+  <data name="EN_byYear" xml:space="preserve">
+    <value>by Year</value>
+  </data>
+  <data name="EN_Cable" xml:space="preserve">
+    <value>Cable (1.5Mb):</value>
+  </data>
+  <data name="EN_CutomizedEBOSC" xml:space="preserve">
+    <value>Customised Bulletin of Serials Changes Report</value>
+  </data>
+  <data name="EN_DSL" xml:space="preserve">
+    <value>DSL (512Kb):</value>
+  </data>
+  <data name="EN_E-JournalPackag" xml:space="preserve">
+    <value>E-Journal Package Title Change Report</value>
+  </data>
+  <data name="EN_EnterEmailAddress" xml:space="preserve">
+    <value>Enter E-mail address for report delivery</value>
+  </data>
+  <data name="EN_ErrorRequesting" xml:space="preserve">
+    <value>Error Requesting Report</value>
+  </data>
+  <data name="EN_InProcess" xml:space="preserve">
+    <value>Being Processed</value>
+  </data>
+  <data name="EN_InvalidEmailAddres" xml:space="preserve">
+    <value>Invalid E-mail Address.</value>
+  </data>
+  <data name="EN_ISDN" xml:space="preserve">
+    <value>ISDN (128Kb):</value>
+  </data>
+  <data name="EN_ReportEmailed" xml:space="preserve">
+    <value>Your report has been e-mailed.</value>
+  </data>
+  <data name="EN_SelectCatalog" xml:space="preserve">
+    <value>Select catalogue to view from the following list.</value>
+  </data>
+  <data name="EN_AllContentThrough" xml:space="preserve">
+    <value>All content through ##CoverEndDate## </value>
+  </data>
+  <data name="EN_AllToPresent" xml:space="preserve">
+    <value>All content from ##CoverBeginDate## to present </value>
+  </data>
+  <data name="EN_BackFileNotes" xml:space="preserve">
+    <value>Backfile Notes </value>
+  </data>
+  <data name="EN_ARR" xml:space="preserve">
+    <value>Accounts Receivable Representative </value>
+  </data>
+  <data name="EN_CSR" xml:space="preserve">
+    <value>CSR</value>
+  </data>
+  <data name="EN_HourDetail" xml:space="preserve">
+    <value>Monday - Friday, 7:00 a.m. to 5:00 p.m. Central Time (GMT -6 standard time)</value>
+  </data>
+  <data name="EN_PhysicalAddress" xml:space="preserve">
+    <value>Postal Address</value>
+  </data>
+  <data name="EN_AuthorizedRenewals" xml:space="preserve">
+    <value>Authorised Renewals have been sent for processing.</value>
+  </data>
+  <data name="EN_ConfirmedRelease" xml:space="preserve">
+    <value>Confirmed Release of Authorised Renewals</value>
+  </data>
+  <data name="EN_FundCode/Hegis2" xml:space="preserve">
+    <value>Fund Code/HEGIS</value>
+  </data>
+  <data name="EN_Pleaseentervali" xml:space="preserve">
+    <value>Please enter valid date in start and expiry date</value>
+  </data>
+  <data name="EN_Wehavechangedth" xml:space="preserve">
+    <value>We have changed the status of the issue(s) you received - thank you.</value>
+  </data>
+  <data name="EN_Wehavereclaimed" xml:space="preserve">
+    <value>We have reclaimed the issue(s) you requested - thank you.</value>
+  </data>
+  <data name="EN_Yourclaimfor&lt;Ti" xml:space="preserve">
+    <value>Your claim for &lt;TitleName&gt; and order number &lt;OrderNumber&gt; has been submitted - thank you.</value>
+  </data>
+  <data name="EN_03Duplicates" xml:space="preserve">
+    <value>03 - Duplicates being received. Please combine/extend/advise on new expiry</value>
+  </data>
+  <data name="EN_06Expire" xml:space="preserve">
+    <value>06 - Expiry notices being received. Please correct and advise</value>
+  </data>
+  <data name="EN_10Started" xml:space="preserve">
+    <value>10 - Started on the wrong date. Please send missing issues or adjust expiry date</value>
+  </data>
+  <data name="EN_11Subscription" xml:space="preserve">
+    <value>11 - Subscription began too soon. Expiry date should be</value>
+  </data>
+  <data name="EN_12Verify" xml:space="preserve">
+    <value>12 - Verify expiry date</value>
+  </data>
+  <data name="EN_25Extend" xml:space="preserve">
+    <value>25 - Extend for unavailable issues and advise on new expiry date</value>
+  </data>
+  <data name="EN_EmailClaimConfirmations" xml:space="preserve">
+    <value>E-mail Claim Confirmations</value>
+  </data>
+  <data name="EN_EmailOrderConfirmation" xml:space="preserve">
+    <value>E-mail Order Confirmations</value>
+  </data>
+  <data name="EN_NewPasswordisin" xml:space="preserve">
+    <value>New Password is in use. Please pick a different Password.</value>
+  </data>
+  <data name="EN_SubscriberDetailAdded" xml:space="preserve">
+    <value>The new subscriber information has been e-mailed to your CAE, who will create a new subscriber record for this address. Thank You!</value>
+  </data>
+  <data name="EN_CannotClaimMsg" xml:space="preserve">
+    <value>This order cannot yet be claimed. From the order start date, please allow 10 days for a daily publication, 14 days for a weekly publication and 30 days for all others before attempting to claim.</value>
+  </data>
+  <data name="EN_ExpectedReceived" xml:space="preserve">
+    <value>Expected/Received</value>
+  </data>
+  <data name="EN_JetsMessage" xml:space="preserve">
+    <value>If the volume/issue you wish to claim is not listed, please contact your Customer Account Executive</value>
+  </data>
+  <data name="EN_Pleasechoosefro" xml:space="preserve">
+    <value>Please select the volume/issue you are claiming from the Volume/Issues listed below. </value>
+  </data>
+  <data name="EN_Pleaseenteraval234567" xml:space="preserve">
+    <value>Please enter a valid Additional E-mail</value>
+  </data>
+  <data name="EN_Pleaseenterthev2" xml:space="preserve">
+    <value>Please enter the volume/issue you are claiming or choose from the Volume/Issues listed</value>
+  </data>
+  <data name="EN_Pleaseenterthev23" xml:space="preserve">
+    <value>Please enter the volume/issue you are claiming below. </value>
+  </data>
+  <data name="EN_Pleaseselectfro" xml:space="preserve">
+    <value>Please select from the volume/issues listed below. </value>
+  </data>
+  <data name="EN_MARC" xml:space="preserve">
+    <value>MARC</value>
+  </data>
+  <data name="EN_NoRatesAvailabl" xml:space="preserve">
+    <value>For information about available rates, please &lt;a href='mailto:&lt;$EmailAddress$&gt;'&gt;e-mail us&lt;/a&gt;.</value>
+  </data>
+  <data name="EN_RTC_10" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="EN_StateTax" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="EN_ErrorHeader" xml:space="preserve">
+    <value>There has been a problem processing the transaction you are currently working on. This problem has automatically been forwarded to our technical support group who will investigate and resolve this issue. If you have any questions please contact &lt;a href="mailto:support@ebsco.com"&gt;EIS Customer Care&lt;/a&gt;:</value>
+  </data>
+  <data name="EN_Thepublisherhas" xml:space="preserve">
+    <value>The publisher has advised that this title is non-cancellable. An e-mail has been sent to your Customer Service Representative for review.</value>
+  </data>
+  <data name="EN_Thisistoconfirm" xml:space="preserve">
+    <value>This is to confirm that your order will be cancelled at expiry.</value>
+  </data>
+  <data name="EN_Thisistoconfirm2" xml:space="preserve">
+    <value>This is to confirm your order will be cancelled immediately.</value>
+  </data>
+  <data name="EN_Wecannotperform" xml:space="preserve">
+    <value>We cannot perform this request because it was previously cancelled. Please try again.</value>
+  </data>
+  <data name="EN_AuthorizeAllRenewals2" xml:space="preserve">
+    <value>Authorise all renewals in search</value>
+  </data>
+  <data name="EN_Wehaveauthorize" xml:space="preserve">
+    <value>We have authorised &lt;$NumofRenewals$&gt; renewals - Thank You.</value>
+  </data>
+  <data name="EN_CustomerCode,Us" xml:space="preserve">
+    <value>Customer Code, User Name or Password incorrect—please try again.</value>
+  </data>
+  <data name="EN_EmailSent" xml:space="preserve">
+    <value>An e-mail will be sent confirming your login information.</value>
+  </data>
+  <data name="EN_EmailUs" xml:space="preserve">
+    <value>E-mail Us</value>
+  </data>
+  <data name="EN_ForgotLoginInformation" xml:space="preserve">
+    <value>Forgotten Login Information</value>
+  </data>
+  <data name="EN_ForgotLoginInformation2" xml:space="preserve">
+    <value>Forgotten Login Information?</value>
+  </data>
+  <data name="EN_NoAccountsFound" xml:space="preserve">
+    <value>There were no accounts found for this e-mail address.</value>
+  </data>
+  <data name="EN_Thanksforyouren" xml:space="preserve">
+    <value>Thanks for your enquiry.</value>
+  </data>
+  <data name="EN_Therewasatempor" xml:space="preserve">
+    <value>There was a temporary problem with our server. Please log in again to re-establish your connection to EBSCONET. Thank you.</value>
+  </data>
+  <data name="EN_Theusernamesand" xml:space="preserve">
+    <value>The user names and passwords for the e-mail address (&lt;$EmailAddress$&gt;) you sent to us are listed below. If any of these have been sent to you in error please &lt;a href=mailto:customercare@ebsco.com&gt;contact us&lt;/a&gt;.</value>
+  </data>
+  <data name="EN_ThisisnotanActi" xml:space="preserve">
+    <value>This is not an Active Account.</value>
+  </data>
+</root>

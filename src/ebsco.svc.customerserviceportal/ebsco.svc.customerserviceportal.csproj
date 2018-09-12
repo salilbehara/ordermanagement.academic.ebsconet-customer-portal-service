@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\ebsco.svc.customerserviceportal.xml</DocumentationFile>
+    <NoWarn>$(NoWarn);1701,1702,1591,3568</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\ebsco.svc.customerserviceportal.xml</DocumentationFile>
+    <NoWarn>$(NoWarn);1701,1702,1591,3568</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="swashbuckle.aspnetcore" Version="2.5.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lbtest.htm" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ebsco.svc.customerserviceportal.translations\ebsco.svc.customerserviceportal.translations.csproj" />
+    <ProjectReference Include="..\ebsco.svc.webapi.framework\ebsco.svc.webapi.framework.csproj" />
+    <ProjectReference Include="..\ReallySimpleFeatureToggle.EBSCO.Client\ReallySimpleFeatureToggle.EBSCO.Client.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\lbtest.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
