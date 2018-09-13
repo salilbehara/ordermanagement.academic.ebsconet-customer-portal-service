@@ -24,7 +24,8 @@ pipeline {
         stage('Build and Run Unit Tests') {
 			steps {
                 echo "Build tag: ${env.BUILD_TAG}"
-				echo "Build path: ${env.BUILD_PATH}"
+
+				echo "Build path: ${env.SITE_BASE_PATH}"
                 
 				writeFile file: 'Dockerfile', text: libraryResource('docker\\net-core-build\\2.0\\Dockerfile')
 				powershell "docker build --build-arg bin_dir=${env.BIN_DIR} --tag ${env.BUILD_TAG}-i ."
