@@ -24,6 +24,7 @@ pipeline {
         stage('Build and Run Unit Tests') {
 			steps {
                 echo "Build tag: ${env.BUILD_TAG}"
+
 				echo "Build path: ${env.BUILD_PATH}"
                 
 				writeFile file: 'Dockerfile', text: libraryResource('docker\\net-core-build\\2.0\\Dockerfile')
